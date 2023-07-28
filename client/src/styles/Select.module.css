@@ -1,0 +1,23 @@
+.custom1 {
+    display: block;
+    background-color: #5c6370;
+    color: #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(55, 65, 81, 1);
+    margin-left: 10px;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    margin-right: 10px; 
+    font-size: small;
+    font-stretch: expanded;
+}
+
