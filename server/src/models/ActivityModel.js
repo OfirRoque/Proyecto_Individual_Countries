@@ -31,7 +31,7 @@ const Activity = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isIn: ["Verano", "Otoño", "Invierno", "Primavera"]
+                isIn: [["Verano", "Otoño", "Invierno", "Primavera"]]
             }
         }
     })

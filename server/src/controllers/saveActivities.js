@@ -19,16 +19,16 @@ const saveActivity = async (req, res) => {
                     duration,
                     season
                 })
-                const country = await Country.findAll({
-                    where: {
-                        name: {
-                            [Op.iLike]: `%${nameCountry}%`
+                for (const element of nameCountry) {
+                    const country = await Country.findAll({
+                        where: {
+                            name: {
+                                [Op.iLike]: `%${element}%`
+                            }
                         }
-                    }
-                })
-                
-                await activity.addCountry(country);
-                console.log(country);
+                    })
+                    await activity.addCountry(country);
+                }
                 return res.status(200).json({message: "Actividad creada con exito"});
             }
         }
